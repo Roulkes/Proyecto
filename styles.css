@@ -1,0 +1,141 @@
+/* Estilo del body con fondo degradado */
+body {
+    background: linear-gradient(to bottom, #E6E6FA, #D8BFD8, #800080, #4B0082);
+    color: #FFFFFF; /* Color del texto */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del título */
+h1 {
+    font-size: 2.5em;
+    color: #FFE4E1; /* Rosa Claro */
+    text-shadow: 2px 2px 4px #4B0082; /* Sombra de texto */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+}
+
+/* Estilo de las celdas de la tabla */
+th, td {
+    border: 1px solid #FFFFFF;
+    padding: 10px;
+    text-align: left;
+    color: #FFFFFF; /* Color del texto */
+}
+
+/* Estilo del encabezado de la tabla */
+th {
+    background-color: #800080; /* Púrpura */
+    font-weight: bold;
+}
+
+/* Estilo de las filas impares */
+tr:nth-child(odd) {
+    background-color: rgba(255, 228, 225, 0.3); /* Fondo translúcido */
+}
+
+/* Estilo de las filas pares */
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+}
+
+/* Estilo de los enlaces */
+a {
+    color: #FFD700; /* Dorado */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+/* Contenedor del formulario y la imagen */
+.form-and-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Estilo del formulario */
+.form-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Imagen al lado del formulario */
+.image-container {
+    flex: 1;
+}
+
+/* Estilo de la imagen */
+.side-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo de los botones */
+button {
+    background-color: #4B0082; /* Índigo */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Cambio de color al pasar sobre los botones */
+button:hover {
+    background-color: #800080; /* Púrpura */
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Estilo de las etiquetas y campos del formulario */
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+input {
+    margin-top: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}

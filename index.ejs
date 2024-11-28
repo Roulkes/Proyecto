@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de ING. Roulkes</title>
+    <link rel="stylesheet" href="/stylesheet/styles.css">
+</head>
+<body>
+    <h1>Lista de usuarios</h1>
+
+    <!-- Tabla dinámica de usuarios -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Fecha de nacimiento</th>
+                <th>Sexo</th>
+                <th>Edad</th>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>Numero de cuenta</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+            <tr>
+                <td><%= user.id %></td> <!-- ID del usuario -->
+                <td><%= user.name %></td> <!-- Nombre del usuario -->
+                <td><%= user.email %></td> <!-- Email del usuario -->
+                <td><%= user.fecha_nacimiento %></td> <!-- Fecha de nacimiento -->
+                <td><%= user.sexo %></td> <!-- Sexo del usuario -->
+                <td><%= user.edad %></td> <!-- Edad del usuario -->
+                <td><%= user.altura %></td> <!-- Altura -->
+                <td><%= user.peso %></td> <!-- Peso -->
+                <td><%= user.numero_cuenta %></td> <!-- Número de cuenta -->
+                <td>
+
+                    <a href="/edit/<%= user.id %>">Editar</a>
+                    <a href="/delete/<%= user.id %>" onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?')">Eliminar</a>                
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <!-- Formulario para agregar un nuevo usuario -->
+    <h2>Agregar Nuevo Usuario</h2>
+    <form action="/add" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+        <label for="sexo">Sexo:</label>
+        <input type="text" id="sexo" name="sexo" required>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="altura">Altura:</label>
+        <input type="number" step="0.01" id="altura" name="altura" required>
+
+        <label for="peso">Peso:</label>
+        <input type="number" step="0.01" id="peso" name="peso" required>
+
+        <label for="numero_cuenta">Número de cuenta:</label>
+        <input type="text" id="numero_cuenta" name="numero_cuenta" required>
+
+        <button type="submit">Agregar Usuario</button>
+    </form>
+
+</body>
+</html>
